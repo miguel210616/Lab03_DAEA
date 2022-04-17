@@ -33,6 +33,7 @@ namespace Lab03
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvListado = new System.Windows.Forms.DataGridView();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnBuscarDataReader = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,13 +55,14 @@ namespace Lab03
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvListado
             // 
             this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListado.Location = new System.Drawing.Point(12, 62);
             this.dgvListado.Name = "dgvListado";
-            this.dgvListado.Size = new System.Drawing.Size(378, 358);
+            this.dgvListado.Size = new System.Drawing.Size(578, 358);
             this.dgvListado.TabIndex = 3;
             // 
             // txtNombre
@@ -70,11 +72,22 @@ namespace Lab03
             this.txtNombre.Size = new System.Drawing.Size(167, 20);
             this.txtNombre.TabIndex = 4;
             // 
+            // btnBuscarDataReader
+            // 
+            this.btnBuscarDataReader.Location = new System.Drawing.Point(415, 14);
+            this.btnBuscarDataReader.Name = "btnBuscarDataReader";
+            this.btnBuscarDataReader.Size = new System.Drawing.Size(157, 23);
+            this.btnBuscarDataReader.TabIndex = 5;
+            this.btnBuscarDataReader.Text = "Buscar con DataReader";
+            this.btnBuscarDataReader.UseVisualStyleBackColor = true;
+            this.btnBuscarDataReader.Click += new System.EventHandler(this.btnBuscarDataReader_Click);
+            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 450);
+            this.ClientSize = new System.Drawing.Size(602, 450);
+            this.Controls.Add(this.btnBuscarDataReader);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.btnBuscar);
@@ -93,5 +106,6 @@ namespace Lab03
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvListado;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Button btnBuscarDataReader;
     }
 }
